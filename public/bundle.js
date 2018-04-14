@@ -81,6 +81,7 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   constructor(props) {
     super(props);
     this.state = {
+      months: '',
       weeks: '',
       days: '',
       hours: '',
@@ -93,31 +94,69 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     this.go();
   }
   go() {
-    let grad = new Date(2017, 9, 10);
+    let grad = new Date(2017, 7, 13);
     let now = new Date();
-    let weeks = Math.floor((now - grad) / 604800000);
+    let months = Math.floor((now - grad) / 2419200000);
+    let weeks = Math.floor((now - grad) % 2419200000 / 604800000);
     let days = Math.floor((now - grad) % 604800000 / 86400000);
     let hours = Math.floor((now - grad) % 86400000 / 3600000);
     let minutes = Math.floor((now - grad) % 3600000 / 60000);
     let seconds = Math.floor((now - grad) % 60000 / 1000);
-    this.setState({ weeks, days, hours, minutes, seconds });
+    this.setState({ months, weeks, days, hours, minutes, seconds });
     setTimeout(this.go, 1000);
   }
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      null,
-      'It has been ',
-      this.state.weeks,
-      ' weeks  ',
-      this.state.days,
-      ' days ',
-      this.state.hours,
-      ' hours ',
-      this.state.minutes,
-      ' minutes ',
-      this.state.seconds,
-      ' seconds since Kenneth has had a job.'
+      { id: 'mainDiv' },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { id: 'top' },
+        'It has been '
+      ),
+      ' ',
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { id: 'months' },
+        this.state.months,
+        ' months '
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { id: 'weeks' },
+        this.state.weeks,
+        ' weeks '
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { id: 'days' },
+        this.state.days,
+        ' days '
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { id: 'hours' },
+        this.state.hours,
+        ' hours '
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { id: 'minutes' },
+        this.state.minutes,
+        ' minutes '
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { id: 'seconds' },
+        this.state.seconds,
+        ' seconds '
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { id: 'bottom' },
+        'SINCE KENNETH HAS HAD A FULL TIME JOB.'
+      )
     );
   }
 }
