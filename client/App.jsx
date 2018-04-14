@@ -32,7 +32,7 @@ class App extends React.Component {
   render() {
     return (
       <div id="mainDiv">
-        <div id="top">It has been </div> <br/>
+        <div id="top">It has been </div>
         <div id="months">{this.state.months} months </div>
         <div id="weeks">{this.state.weeks} weeks </div>
         <div id="days">{this.state.days} days </div>

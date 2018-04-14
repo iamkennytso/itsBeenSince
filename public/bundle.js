@@ -114,8 +114,6 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         { id: 'top' },
         'It has been '
       ),
-      ' ',
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { id: 'months' },
