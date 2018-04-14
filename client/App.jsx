@@ -18,7 +18,7 @@ class App extends React.Component {
     this.go()
   }
   go(){
-    let grad = new Date (2017, 7, 13)
+    let grad = new Date (2017, 7, 14)
     let now = new Date()
     let months = Math.floor((now - grad) / 2419200000)
     let weeks = Math.floor((now - grad) % 2419200000 / 604800000)
@@ -33,12 +33,12 @@ class App extends React.Component {
     return (
       <div id="mainDiv">
         <div id="top">It has been </div>
-        <div id="months">{this.state.months} months </div>
-        <div id="weeks">{this.state.weeks} weeks </div>
-        <div id="days">{this.state.days} days </div>
-        <div id="hours">{this.state.hours} hours </div>
-        <div id="minutes">{this.state.minutes} minutes </div>
-        <div id="seconds">{this.state.seconds} seconds </div> 
+        {this.state.months > 0 ? <div id="months">{this.state.months} {this.state.months === 1 ? 'month' : 'months'} </div> : null}
+        {this.state.weeks > 0 ? <div id="weeks">{this.state.weeks} {this.state.weeks === 1 ? 'week' : 'weeks'} </div> : null}
+        {this.state.days > 0 ? <div id="days">{this.state.days} {this.state.days === 1 ? 'day' : 'days'} </div> : null}
+        {this.state.hours > 0 ? <div id="hours">{this.state.hours} {this.state.hours === 1 ? 'hour' : 'hours'} </div> : null}
+        {this.state.minutes > 0 ? <div id="minutes">{this.state.minutes} {this.state.minutes === 1 ? 'minute' : 'minutes'} </div> : null}
+        {this.state.seconds > 0 ? <div id="seconds">{this.state.seconds} {this.state.seconds === 1 ? 'second' : 'seconds'} </div> : null}
         <div id="bottom">SINCE KENNETH HAS HAD A FULL TIME JOB.</div>
       </div>
     );

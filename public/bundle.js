@@ -94,7 +94,7 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     this.go();
   }
   go() {
-    let grad = new Date(2017, 7, 13);
+    let grad = new Date(2017, 7, 14);
     let now = new Date();
     let months = Math.floor((now - grad) / 2419200000);
     let weeks = Math.floor((now - grad) % 2419200000 / 604800000);
@@ -114,42 +114,54 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         { id: 'top' },
         'It has been '
       ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      this.state.months > 0 ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { id: 'months' },
         this.state.months,
-        ' months '
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        ' ',
+        this.state.months === 1 ? 'month' : 'months',
+        ' '
+      ) : null,
+      this.state.weeks > 0 ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { id: 'weeks' },
         this.state.weeks,
-        ' weeks '
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        ' ',
+        this.state.weeks === 1 ? 'week' : 'weeks',
+        ' '
+      ) : null,
+      this.state.days > 0 ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { id: 'days' },
         this.state.days,
-        ' days '
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        ' ',
+        this.state.days === 1 ? 'day' : 'days',
+        ' '
+      ) : null,
+      this.state.hours > 0 ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { id: 'hours' },
         this.state.hours,
-        ' hours '
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        ' ',
+        this.state.hours === 1 ? 'hour' : 'hours',
+        ' '
+      ) : null,
+      this.state.minutes > 0 ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { id: 'minutes' },
         this.state.minutes,
-        ' minutes '
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        ' ',
+        this.state.minutes === 1 ? 'minute' : 'minutes',
+        ' '
+      ) : null,
+      this.state.seconds > 0 ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { id: 'seconds' },
         this.state.seconds,
-        ' seconds '
-      ),
+        ' ',
+        this.state.seconds === 1 ? 'second' : 'seconds',
+        ' '
+      ) : null,
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { id: 'bottom' },
