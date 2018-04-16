@@ -1,0 +1,44 @@
+#mainDiv{
+    grid-row: 2/3;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:100vh
+}
+#top{
+    font-family: Helvetica;
+    font-size: 30px
+}   
+#months{
+    font-family: Bookman;
+    font-size: 60px;
+    font-weight: bold;
+}
+#weeks{
+    font-family: Trebuchet;
+    font-size: 50px
+}
+#days{
+    font-family: Courier;
+    font-size: 40px
+
+}
+#hours{
+    font-family: Times;
+    font-size: 30px;
+    font-style: italic
+}
+#minutes{
+    font-family: Garamond;
+    font-size: 20px
+}
+#seconds{
+    font-family: Georgia;
+    font-size: 15px
+}
+#bottom{
+    font-family: Arial Black;
+    font-size: 15px;
+    color: red
+}   
