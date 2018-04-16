@@ -32,6 +32,7 @@ class App extends React.Component {
   render() {
     return (
       <div id="mainDiv">
+        <img src="recurse.gif" alt='' />
         <div id="top">It has been </div>
         {this.state.months > 0 ? <div id="months">{this.state.months} {this.state.months === 1 ? 'month' : 'months'} </div> : null}
         {this.state.weeks > 0 ? <div id="weeks">{this.state.weeks} {this.state.weeks === 1 ? 'week' : 'weeks'} </div> : null}
