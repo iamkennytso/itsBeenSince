@@ -18,8 +18,10 @@ class App extends React.Component {
     this.go()
   }
   go(){
-    let start = new Date (2018, 7, 2)
+    let start = new Date (2018, 6, 2, 10, 30)
     let now = new Date()
+    console.log(start)
+    console.log(now)
     let months = Math.floor((now - start) / 2419200000)
     let weeks = Math.floor((now - start) % 2419200000 / 604800000)
     let days = Math.floor((now - start) % 604800000 / 86400000)
@@ -41,6 +43,7 @@ class App extends React.Component {
         <div id="minutes">{this.state.minutes} {this.state.minutes === 1 ? 'minute' : 'minutes'} </div>
         <div id="seconds">{this.state.seconds} {this.state.seconds === 1 ? 'second' : 'seconds'} </div>
         <div id="bottom">SINCE KENNETH STARTED WORKING AT THE NBA!!!</div>
+        
       </div>
     );
   }
